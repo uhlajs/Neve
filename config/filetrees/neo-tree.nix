@@ -33,6 +33,7 @@
         "<space>" = "none";
         "l" = "open_with_window_picker";
         "h" = "close_node";
+        "/" = "none";
       };
     };
   };
