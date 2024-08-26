@@ -11,7 +11,7 @@
           end
         end
       '';
-      open_mapping = "[[<A-i>]]";
+      open_mapping = "[[<C-/>]]";
       hide_numbers = true;
       shade_terminals = true;
       start_in_insert = true;
@@ -19,8 +19,8 @@
       persist_mode = true;
       insert_mappings = true;
       close_on_exit = true;
-      shell = "zsh";
-      direction = "horizontal"; # 'vertical' | 'horizontal' | 'window' | 'float'
+      shell = "fish";
+      direction = "tab"; # 'vertical' | 'horizontal' | 'tab' | 'float'
       auto_scroll = true;
       float_opts = {
         border = "single"; # 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open

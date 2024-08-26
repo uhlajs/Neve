@@ -75,7 +75,7 @@
       scrolloff = 8;
 
       # Place a column line
-      colorcolumn = "80";
+      colorcolumn = "88";
 
       # Reduce which-key timeout to 10ms
       timeoutlen = 100;
@@ -96,7 +96,7 @@
 
       # Enable chars list
       list = true; # Show invisible characters (tabs, eol, ...)
-      listchars = "eol:↲,tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
+      listchars = "tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
 
       # More space in the neovim command line for displaying messages
       cmdheight = 2;
@@ -111,6 +111,9 @@
       formatexpr = "v:lua.require'conform'.formatexpr()";
 
       laststatus = 3; # (https://neovim.io/doc/user/options.html#'laststatus')
+
+      # Mainly for Obsidian formatting
+      conceallevel = 1;
     };
 
     extraConfigLua = ''

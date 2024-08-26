@@ -45,7 +45,7 @@
           '';
         };
         google_java_format = {
-          enable = true;
+          enable = false;
         };
         stylua = {
           enable = true;

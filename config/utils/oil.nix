@@ -1,6 +1,6 @@
 {
   plugins.oil = {
-    enable = true;
+    enable = false;
     settings = {
       useDefaultKeymaps = true;
       deleteToTrash = true;
@@ -40,15 +40,15 @@
       };
     };
   };
-  keymaps = [
-    {
-      mode = "n";
-      key = "<leader>o";
-      action = ":Oil --float<CR>";
-      options = {
-        desc = "Open parent directory";
-        silent = true;
-      };
-    }
-  ];
+  # keymaps = [
+  #   {
+  #     mode = "n";
+  #     key = "<leader>o";
+  #     action = ":Oil --float<CR>";
+  #     options = {
+  #       desc = "Open parent directory";
+  #       silent = true;
+  #     };
+  #   }
+  # ];
 }

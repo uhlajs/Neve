@@ -37,10 +37,6 @@
         action = "find_files";
         options.desc = "Find project files";
       };
-      "<leader>/" = {
-        action = "live_grep";
-        options.desc = "Grep (root dir)";
-      };
       "<leader>:" = {
         action = "command_history";
         options.desc = "Command History";
@@ -76,6 +72,10 @@
       "<leader>sa" = {
         action = "autocommands";
         options.desc = "Auto Commands";
+      };
+      "<leader>sg" = {
+        action = "live_grep";
+        options.desc = "Grep (root dir)";
       };
       "<leader>sb" = {
         action = "current_buffer_fuzzy_find";

@@ -9,6 +9,7 @@
     ./colorschemes/base16.nix
     ./colorschemes/catppuccin.nix
     ./colorschemes/rose-pine.nix
+    ./colorschemes/tokyonight.nix
 
     ./completion/cmp.nix
     ./completion/copilot.nix
@@ -67,6 +68,8 @@
     ./utils/nvim-autopairs.nix
     ./utils/nvim-colorizer.nix
     ./utils/nvim-surround.nix
+    ./utils/nvim-window-picker.nix
+    ./utils/obsidian.nix
     ./utils/oil.nix
     ./utils/persistence.nix
     ./utils/plenary.nix
