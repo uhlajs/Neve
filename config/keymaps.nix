@@ -406,6 +406,17 @@
       action = "<Esc>";
     }
 
+    # Stop the highlighting :nohlsearch
+    {
+      mode = "n";
+      key = "<esc><esc>";
+      action = ":noh<cr>";
+      options = {
+        silent = true;
+        desc = "Stop the highlighting";
+      };
+    }
+
     # {
     #   mode = "n";
     #   key = "<C-f>";
