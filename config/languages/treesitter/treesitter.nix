@@ -2,7 +2,14 @@
   plugins.treesitter = {
     enable = true;
     settings = {
-      indent = {enable = true;};
+      auto_install = true;
+      highlight = {
+        enable = true;
+
+      };
+      indent = {
+        enable = true;
+      };
     };
     folding = true;
     nixvimInjections = true;

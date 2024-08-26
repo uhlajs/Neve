@@ -22,14 +22,14 @@
     sources = {
       code_actions = {
         gitsigns.enable = true;
-        statix.enable = true;
+        statix.enable = false;
       };
       diagnostics = {
         checkstyle = {
           enable = true;
         };
         statix = {
-          enable = true;
+          enable = false;
         };
       };
       formatting = {
