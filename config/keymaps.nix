@@ -409,7 +409,7 @@
     # Stop the highlighting :nohlsearch
     {
       mode = "n";
-      key = "<esc><esc>";
+      key = "<leader>h";
       action = ":noh<cr>";
       options = {
         silent = true;
