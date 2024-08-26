@@ -33,7 +33,7 @@
               -- Taken from https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip
               -- to stop interference between cmp and luasnip
 
-              ['<CR>'] = cmp.mapping(function(fallback)
+              ['<C-y>'] = cmp.mapping(function(fallback)
                     if cmp.visible() then
                         if luasnip.expandable() then
                             luasnip.expand()
