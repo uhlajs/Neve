@@ -20,13 +20,13 @@
       insert_mappings = true;
       close_on_exit = true;
       shell = "fish";
-      direction = "tab"; # 'vertical' | 'horizontal' | 'tab' | 'float'
+      direction = "float"; # 'vertical' | 'horizontal' | 'tab' | 'float'
       auto_scroll = true;
       float_opts = {
-        border = "single"; # 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
-        width = 80;
-        height = 20;
-        winblend = 0;
+        border = "none";
+        width = 100000;
+        height = 100000;
+        zindex = 200;
       };
       winbar = {
         enabled = true;
