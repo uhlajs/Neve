@@ -2,17 +2,8 @@
   plugins.toggleterm = {
     enable = true;
     settings = {
-      size = ''
-        function(term)
-          if term.direction == "horizontal" then
-            return 15
-              elseif term.direction == "vertical" then
-            return vim.o.columns * 0.4
-          end
-        end
-      '';
-      open_mapping = "[[<C-/>]]";
-      hide_numbers = true;
+      open_mapping = "[[<leader>/]]";
+      hidden = true;
       shade_terminals = true;
       start_in_insert = true;
       terminal_mappings = true;
@@ -23,18 +14,10 @@
       direction = "float"; # 'vertical' | 'horizontal' | 'tab' | 'float'
       auto_scroll = true;
       float_opts = {
-        border = "none";
+        border = "none"; # 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
         width = 100000;
         height = 100000;
         zindex = 200;
-      };
-      winbar = {
-        enabled = true;
-        name_formatter = ''
-          function(term)
-            return term.name
-          end
-        '';
       };
     };
   };
