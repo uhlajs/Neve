@@ -71,6 +71,7 @@
     ./utils/nvim-window-picker.nix
     ./utils/obsidian.nix
     ./utils/oil.nix
+    ./utils/outline.nix
     ./utils/persistence.nix
     ./utils/plenary.nix
     ./utils/project-nvim.nix
