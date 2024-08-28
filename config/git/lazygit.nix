@@ -33,6 +33,7 @@
       action = ":lua LazyGit()<cr>";
       options = {
         desc = "LazyGit";
+        silent = true;
       };
     }
   ];
