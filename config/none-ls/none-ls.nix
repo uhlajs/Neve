@@ -50,14 +50,6 @@
         stylua = {
           enable = true;
         };
-        black = {
-          enable = true;
-          settings = ''
-            {
-              extra_args = { "--fast" },
-            }
-          '';
-        };
       };
     };
   };

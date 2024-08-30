@@ -10,7 +10,7 @@
       typescript = [["prettierd" "prettier"]];
       typescriptreact = [["prettierd" "prettier"]];
       java = ["google-java-format"];
-      python = ["black"];
+      python = ["ruff" "ruff_format" "ruff_organize_imports"];
       lua = ["stylua"];
       nix = ["alejandra"];
       markdown = [["prettierd" "prettier"]];

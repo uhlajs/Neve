@@ -268,15 +268,15 @@
       };
     }
 
-    {
-      mode = "n";
-      key = "J";
-      action = "mzJ`z";
-      options = {
-        silent = true;
-        desc = "Allow cursor to stay in the same place after appeding to current line";
-      };
-    }
+    # {
+    #   mode = "n";
+    #   key = "J";
+    #   action = "mzJ`z";
+    #   options = {
+    #     silent = true;
+    #     desc = "Allow cursor to stay in the same place after appeding to current line";
+    #   };
+    # }
 
     {
       mode = "v";
