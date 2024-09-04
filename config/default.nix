@@ -17,8 +17,7 @@
 
     ./dap/dap.nix
 
-    # ./filetrees/neo-tree.nix
-    # ./filetrees/nvim-tree.nix
+    ./filetrees/neo-tree.nix
     ./git/gitsigns.nix
     ./git/diffview.nix
     ./git/lazygit.nix
@@ -53,7 +52,7 @@
     ./ui/alpha.nix
     ./ui/dressing-nvim.nix
     ./ui/indent-blankline.nix
-    # ./ui/noice.nix
+    ./ui/noice.nix
     ./ui/nvim-notify.nix
     ./ui/nui.nix
 
@@ -77,7 +76,7 @@
     ./utils/plenary.nix
     ./utils/project-nvim.nix
     # ./utils/sidebar.nix
-    # ./utils/tmux-navigator.nix
+    ./utils/tmux-navigator.nix
     ./utils/todo-comments.nix
     ./utils/toggleterm.nix
     ./utils/ultimate-autopair.nix

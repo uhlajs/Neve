@@ -43,7 +43,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>e";
+      key = "<leader>go";
       action = ":Oil --float<CR>";
       options = {
         desc = "Open parent directory";
