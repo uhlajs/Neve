@@ -17,7 +17,8 @@
 
     ./dap/dap.nix
 
-    ./filetrees/neo-tree.nix
+    #./filetrees/neo-tree.nix
+    ./filetrees/nvim-tree.nix
     ./git/gitsigns.nix
     ./git/diffview.nix
     ./git/lazygit.nix
@@ -52,14 +53,14 @@
     ./ui/alpha.nix
     ./ui/dressing-nvim.nix
     ./ui/indent-blankline.nix
-    ./ui/noice.nix
+    # ./ui/noice.nix
     ./ui/nvim-notify.nix
     ./ui/nui.nix
 
     ./utils/better-escape.nix
     ./utils/neocord.nix
     ./utils/hardtime.nix
-    ./utils/harpoon.nix
+    # ./utils/harpoon.nix
     ./utils/illuminate.nix
     ./utils/markdown-preview.nix
     ./utils/mini.nix
@@ -75,14 +76,14 @@
     ./utils/persistence.nix
     ./utils/plenary.nix
     ./utils/project-nvim.nix
-    ./utils/sidebar.nix
-    ./utils/tmux-navigator.nix
+    # ./utils/sidebar.nix
+    # ./utils/tmux-navigator.nix
     ./utils/todo-comments.nix
     ./utils/toggleterm.nix
     ./utils/ultimate-autopair.nix
     ./utils/undotree.nix
-    ./utils/wakatime.nix
+    # ./utils/wakatime.nix
     ./utils/whichkey.nix
-    ./utils/wilder.nix
+    # ./utils/wilder.nix
   ];
 }
