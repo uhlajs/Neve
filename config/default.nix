@@ -17,8 +17,8 @@
 
     ./dap/dap.nix
 
-    #./filetrees/neo-tree.nix
-    ./filetrees/nvim-tree.nix
+    # ./filetrees/neo-tree.nix
+    # ./filetrees/nvim-tree.nix
     ./git/gitsigns.nix
     ./git/diffview.nix
     ./git/lazygit.nix
