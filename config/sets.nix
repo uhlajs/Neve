@@ -72,9 +72,6 @@
       # Place a column line
       colorcolumn = "88";
 
-      # Reduce which-key timeout to 10ms
-      timeoutlen = 100;
-
       # Set encoding type
       encoding = "utf-8";
       fileencoding = "utf-8";
