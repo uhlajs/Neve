@@ -174,6 +174,16 @@
       };
     }
 
+    {
+      mode = "n";
+      key = "<leader>sG";
+      action = "<cmd>:execute 'Telescope live_grep default_text=' . expand('<cword>')<cr>";
+      options = {
+        silent = true;
+        desc = "Grep Current Word";
+      };
+    }
+
     # {
     #   mode = "n";
     #   key = "<leader>,";
