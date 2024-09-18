@@ -21,11 +21,11 @@
     settings = {
       defaults = {
         file_ignore_patterns = [
-          ".git"
-          ".cache"
-          ".direnv"
-          ".venv"
-          "bazel-"
+          "^.git/"
+          "^.cache/"
+          "^.direnv/"
+          "^.venv/"
+          "^bazel-"
         ];
         mappings = {
           i = {
@@ -39,6 +39,12 @@
         };
       };
       pickers = {
+        find_files = {
+          hidden = true;
+        };
+        grep_string = {
+          additional_args = ["--hidden"];
+        };
         live_grep = {
           additional_args = ["--hidden"];
         };
