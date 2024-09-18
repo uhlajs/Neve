@@ -1,6 +1,6 @@
 {
   plugins.copilot-lua = {
-    enable = false;
+    enable = true;
     panel = {
       enabled = false;
       autoRefresh = true;
