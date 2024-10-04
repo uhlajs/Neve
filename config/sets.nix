@@ -91,7 +91,7 @@
       listchars = "tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
 
       # More space in the neovim command line for displaying messages
-      cmdheight = 2;
+      cmdheight = 1;
 
       # We don't need to see things like INSERT anymore
       showmode = false;
@@ -112,6 +112,10 @@
       local opt = vim.opt
       local g = vim.g
       local o = vim.o
+
+      -- Conform
+      g.disable_autoformat = true
+
         -- Neovide
       if g.neovide then
         -- Neovide options

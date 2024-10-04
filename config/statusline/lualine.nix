@@ -1,6 +1,6 @@
 {
   plugins.lualine = {
-    enable = false;
+    enable = true;
     alwaysDivideMiddle = true;
     globalstatus = true;
     ignoreFocus = ["neo-tree"];
@@ -27,7 +27,7 @@
       lualine_c = ["filename"];
       lualine_x = ["filetype"];
       lualine_y = ["progress"];
-      lualine_z = [''" " .. os.date("%R")''];
+      # lualine_z = [''" " .. os.date("%R")''];
     };
   };
 }
