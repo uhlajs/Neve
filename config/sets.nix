@@ -42,7 +42,11 @@
       updatetime = 50; # faster completion (4000ms default)
 
       # Set completeopt to have a better completion experience
-      completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
+      completeopt = [
+        "menuone"
+        "noselect"
+        "noinsert"
+      ]; # mostly just for cmp
 
       # Enable persistent undo history
       swapfile = false;
@@ -89,6 +93,7 @@
       # Enable chars list
       list = true; # Show invisible characters (tabs, eol, ...)
       listchars = "tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
+      # listchars = "eol:↲,tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
 
       # More space in the neovim command line for displaying messages
       cmdheight = 1;
@@ -106,6 +111,7 @@
 
       # Mainly for Obsidian formatting
       conceallevel = 1;
+      inccommand = "split"; # (https://neovim.io/doc/user/options.html#'inccommand')
     };
 
     extraConfigLua = ''
@@ -118,7 +124,6 @@
 
         -- Neovide
       if g.neovide then
-        -- Neovide options
         g.neovide_fullscreen = false
         g.neovide_hide_mouse_when_typing = false
         g.neovide_refresh_rate = 165
@@ -131,13 +136,7 @@
         g.neovide_transparency = 0.8
 
         -- Neovide Fonts
-        o.guifont = "MonoLisa Trial:Medium:h15"
-        -- o.guifont = "CommitMono:Medium:h15"
-        -- o.guifont = "JetBrainsMono Nerd Font:h14:Medium:i"
-        -- o.guifont = "FiraMono Nerd Font:Medium:h14"
-        -- o.guifont = "CaskaydiaCove Nerd Font:h14:b:i"
-        -- o.guifont = "BlexMono Nerd Font Mono:h14:Medium:i"
-        -- o.guifont = "Liga SFMono Nerd Font:b:h15"
+        o.guifont = "JetBrainsMono Nerd Font:h14:Medium:i"
       end
     '';
   };

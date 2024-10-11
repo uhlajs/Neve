@@ -21,11 +21,10 @@
     ./git/gitsigns.nix
     ./git/diffview.nix
     ./git/lazygit.nix
-    # ./git/neogit.nix
+    ./git/neogit.nix
 
     # ./languages/nvim-jdtls.nix
     ./languages/nvim-lint.nix
-    # ./languages/typescript-tools-nvim.nix
     ./languages/treesitter/treesitter.nix
     ./languages/treesitter/treesitter-context.nix
     ./languages/treesitter/treesitter-textobjects.nix
@@ -55,6 +54,7 @@
     # ./ui/noice.nix
     ./ui/nvim-notify.nix
     ./ui/nui.nix
+    ./ui/web-devicons.nix
 
     # ./utils/better-escape.nix
     ./utils/comment.nix
@@ -73,13 +73,13 @@
     ./utils/obsidian.nix
     # ./utils/oil.nix
     ./utils/outline.nix
+    # ./utils/nvterm.nix -- test me
     ./utils/persistence.nix
     ./utils/plenary.nix
     ./utils/project-nvim.nix
     # ./utils/sidebar.nix
     ./utils/tmux-navigator.nix
     ./utils/todo-comments.nix
-    ./utils/toggleterm.nix
     ./utils/ultimate-autopair.nix
     ./utils/undotree.nix
     # ./utils/wakatime.nix
