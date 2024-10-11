@@ -73,7 +73,7 @@
     ./utils/obsidian.nix
     # ./utils/oil.nix
     ./utils/outline.nix
-    # ./utils/nvterm.nix -- test me
+    # ./utils/nvterm.nix
     ./utils/persistence.nix
     ./utils/plenary.nix
     ./utils/project-nvim.nix
