@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ... }: {
   extraPlugins = with pkgs.vimUtils; [
     (buildVimPlugin {
       pname = "ultimate-autopair.nvim";

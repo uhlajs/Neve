@@ -29,7 +29,7 @@
           __unkeyed-2 = "prettier";
           stop_after_first = true;
         };
-        python = ["ruff" "ruff_format" "ruff_organize_imports"];
+        python = [ "ruff" "ruff_format" "ruff_organize_imports" ];
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];
         markdown = {
