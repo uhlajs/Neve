@@ -22,7 +22,10 @@
       dap-ui = {
         enable = false;
         floating.mappings = {
-          close = [ "<ESC>" "q" ];
+          close = [
+            "<ESC>"
+            "q"
+          ];
         };
       };
       dap-virtual-text = {

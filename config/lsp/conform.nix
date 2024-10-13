@@ -2,7 +2,7 @@
 {
   # TODO (Honza Uhlik): Remove this bugfix after this issue is resolved
   #   https://github.com/nix-community/nixvim/issues/1141#issuecomment-2054102360
-  extraPackages = with pkgs; [ nixfmt ];
+  extraPackages = with pkgs; [ nixfmt-rfc-style ];
 
   plugins.conform-nvim = {
     enable = true;
@@ -29,7 +29,11 @@
           __unkeyed-2 = "prettier";
           stop_after_first = true;
         };
-        python = [ "ruff" "ruff_format" "ruff_organize_imports" ];
+        python = [
+          "ruff"
+          "ruff_format"
+          "ruff_organize_imports"
+        ];
         lua = [ "stylua" ];
         nix = [ "nixfmt" ];
         markdown = {
