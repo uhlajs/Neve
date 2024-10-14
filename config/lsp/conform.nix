@@ -2,7 +2,13 @@
 {
   # TODO (Honza Uhlik): Remove this bugfix after this issue is resolved
   #   https://github.com/nix-community/nixvim/issues/1141#issuecomment-2054102360
-  extraPackages = with pkgs; [ nixfmt-rfc-style ];
+  extraPackages = with pkgs; [
+    nixfmt-rfc-style
+    rustfmt
+    ruff
+    prettier
+    stylua
+  ];
 
   plugins.conform-nvim = {
     enable = true;

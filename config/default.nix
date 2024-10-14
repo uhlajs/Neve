@@ -71,6 +71,7 @@
     ./utils/nvim-surround.nix
     ./utils/nvim-window-picker.nix
     ./utils/obsidian.nix
+    ./utils/toggleterm.nix
     # ./utils/oil.nix
     ./utils/outline.nix
     # ./utils/nvterm.nix
