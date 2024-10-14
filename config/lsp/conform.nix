@@ -6,7 +6,6 @@
     nixfmt-rfc-style
     rustfmt
     ruff
-    prettier
     stylua
   ];
 
