@@ -24,7 +24,7 @@
     {
       mode = "n";
       key = "<leader>xx";
-      action = "<cmd>Trouble diagnostic toggle<cr>";
+      action = "<cmd>Trouble diagnostics toggle<cr>";
       options = {
         silent = true;
         desc = "Document Diagnostics (Trouble)";
