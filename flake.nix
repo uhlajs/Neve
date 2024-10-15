@@ -25,7 +25,7 @@
       flake-utils,
       pre-commit-hooks,
       ...
-    }@inputs:
+    }:
     let
       config = import ./config; # import the module directly
     in
@@ -55,21 +55,17 @@
             src = ./.;
             excludes = [ ];
             hooks = {
+              # Standard hooks
+              check-added-large-files.enable = true;
+              check-json.enable = true;
+              check-merge-conflicts.enable = true;
+              check-toml.enable = true;
+              check-yaml.enable = true;
+              detect-private-keys.enable = true;
+              end-of-file-fixer.enable = true;
+              mixed-line-endings.enable = true;
               nixfmt-rfc-style.enable = true;
-              mixed-line-ending = {
-                enable = true;
-                name = "Mixed line ending";
-                description = "Replaces or checks mixed line ending";
-                types = [ "text" ];
-                entry = "${pkgs.python3Packages.pre-commit-hooks}/bin/mixed-line-ending";
-              };
-              trailing-whitespace = {
-                enable = true;
-                name = "Trim Trailing Whitespace";
-                description = "This hook trims trailing whitespace.";
-                types = [ "text" ];
-                entry = "${pkgs.python3Packages.pre-commit-hooks}/bin/trailing-whitespace-fixer";
-              };
+              trim-trailing-whitespace.enable = true;
             };
           };
         };
