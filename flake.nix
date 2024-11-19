@@ -17,7 +17,10 @@
     let
       config = import ./config; # import the module directly
     in
-    flake-utils.lib.eachDefaultSystem (
+    {
+      nixvimModule = config;
+    }
+    // flake-utils.lib.eachDefaultSystem (
       system:
       let
         nixvimLib = nixvim.lib.${system};

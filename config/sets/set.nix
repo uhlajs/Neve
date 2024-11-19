@@ -1,11 +1,13 @@
 {
-  pkgs,
   lib,
   config,
   ...
 }:
 {
-  config = {
+  options = {
+    set.enable = lib.mkEnableOption "Enable set module";
+  };
+  config = lib.mkIf config.set.enable {
     opts = {
       # Enable relative line numbers
       number = true;
@@ -75,6 +77,8 @@
       foldlevel = 99;
       foldlevelstart = 99;
       foldenable = true;
+      foldmethod = "expr";
+      foldexpr = "v:lua.vim.treesitter.foldexpr()";
 
       # Always keep 8 lines above/below cursor unless at start/end of file
       scrolloff = 8;
@@ -82,7 +86,7 @@
       # Place a column line
       colorcolumn = "80";
 
-      # Reduce which-key timeout 
+      # Reduce which-key timeout
       timeoutlen = 200;
 
       # Set encoding type

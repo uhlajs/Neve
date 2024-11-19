@@ -60,17 +60,68 @@ However if you'd like to give it a try before installing, <b>nix run github:redy
     <summary><b>INSTALLATION GUIDE</b></summary>
     I'm assuming you already use nix flakes but in case you don't, please check this tutorial to enable them:
 
-[Flakes](https://nixos.wiki/wiki/Flakes)
+1. Go to flake.nix and add Neve.url = "github:redyf/Neve" to your inputs.
+
+2. Run nix flake update, then Neve should be available for installation.
+
+### Option 1: Using [Flakes](https://nixos.wiki/wiki/Flakes) to install Neve as a Nixvim module.
+
+3. Install it by adding the following code to Nixvim configuration:
+
+```nix
+programs.nixvim = {
+  enable = true;
+  imports = [ inputs.Neve.nixvimModule ];
+  # Then configure Nixvim as usual, you might have to lib.mkForce some of the settings
+  colorschemes.catppuccin.enable = lib.mkForce false;
+  colorschemes.nord.enable = true;
+};
+```
+
+4. Rebuild your system and you should be done :
+
+### Option 2: Using [Flakes](https://nixos.wiki/wiki/Flakes) to install Neve as a package
 
 After enabling it, follow the steps below:
 
-1- Go to flake.nix and add Neve.url = "github:redyf/Neve" to your inputs.
+3. Install it by adding `inputs.Neve.packages.${pkgs.system}.default` to your environment.systemPackages or home.packages if you're using home-manager.
 
-2- Run nix flake update, then Neve should be available for installation.
+4. Rebuild your system and you should be done :
 
-3- Install it by adding `inputs.Neve.packages.${pkgs.system}.default` to your environment.systemPackages or home.packages if you're using home-manager.
+</details>
 
-4- Rebuild your system and you should be done :
+<details>
+    <summary><b>How to enable/disable modules</b></summary>
+For those who aren't familiar with the modular structure of nix, make sure to check this great tutorial made by Vimjoyer.
+
+[Modularize NixOS and Home Manager | Great Practices](https://youtu.be/vYc6IzKvAJQ?si=yBSlOrQ4_Ri_KFFh)
+
+Basically all you need to do is go to the default.nix file of each directory and enable/disable the mkDefault options.
+
+Lets say you want to enable neo-tree, in order to do that you'd have to go to config/filetrees/default.nix and change its value
+from
+
+```nix
+config = lib.mkIf config.filetrees.enable {
+  neo-tree.enable = lib.mkDefault false;
+};
+```
+
+to
+
+```nix
+config = lib.mkIf config.filetrees.enable {
+  neo-tree.enable = lib.mkDefault true;
+};
+```
+
+However, sometimes you'll have many plugins in the same directory and it can be quite annoying to change the value for all of them individually. So instead you can disable them all at once in config/default.nix like below:
+
+To disable all UI plugins for example, you can easily do it by going to config/default.nix and toggling the value from true to false:
+
+```nix
+  ui.enable = lib.mkDefault false;
+```
 
 </details>
 
@@ -82,7 +133,7 @@ After enabling it, follow the steps below:
 
 2- Clone the fork.
 
-3- Make the changes you want, such as enabling/disabling plugins, changing colorschemes, changing neovim options, etc.
+3- Make the changes you want, such as enabling/disabling plugins, changing colorschemes, neovim options, etc.
 
 4- Add the fork to your flake.nix file, the original is `Neve.url = “github:redyf/Neve”`. If a user called foo forks the repo and renames it to bar, it would be `bar.url = “github:foo/bar”`.
 
@@ -96,11 +147,11 @@ Neve is highly customizable. Here are some important files for configuring your 
 
 - **config/default.nix:** This file contains the main configuration file. You can add or delete plugins as you like.
 
-- **config/sets.nix:** In this file, you can add or remove options and adjust their specific settings.
+- **config/sets/set.nix:** In this file, you can add or remove options and adjust their specific settings.
 
-- **config/keymaps.nix:** This file contains custom key mappings. You can add your own keyboard shortcuts to enhance productivity.
+- **config/keys.nix:** This file contains custom key mappings. You can add your own keyboard shortcuts to enhance productivity.
 
-- **config/lsp/lsp.nix:** Here you can configure your preferred Language Servers.
+- **config/lsp/lsp-nvim.nix:** Here you can configure your preferred Language Servers.
 
 - **config/lsp/conform.nix:** Configure Formatters for the desired languages.
 
