@@ -16,6 +16,10 @@
     }@inputs:
     let
       config = import ./config; # import the module directly
+      # Enable unfree packages
+      nixpkgsConfig = {
+        allowUnfree = true;
+      };
     in
     {
       nixvimModule = config;
@@ -24,7 +28,10 @@
       system:
       let
         nixvimLib = nixvim.lib.${system};
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import nixpkgs {
+          inherit system;
+          config = nixpkgsConfig;
+        };
         nixvim' = nixvim.legacyPackages.${system};
         nvim = nixvim'.makeNixvimWithModule {
           inherit pkgs;
