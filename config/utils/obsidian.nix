@@ -5,7 +5,7 @@
       workspaces = [
         {
           name = "personal";
-          path = "~/Nextcloud/Obsidian/vaults/personal";
+          path = "~/Nextcloud/Obsidian/Personal";
         }
       ];
     };
