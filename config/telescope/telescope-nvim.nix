@@ -28,6 +28,13 @@
       # If you'd prefer Telescope not to enter a normal-like mode when hitting escape (and instead exiting), you can map <Esc> to do so via:
       settings = {
         defaults = {
+          file_ignore_patterns = [
+            "^.git/"
+            "^.cache/"
+            "^.direnv/"
+            "^.venv/"
+            "^bazel-"
+          ];
           mappings = {
             i = {
               "<esc>" = {
@@ -53,7 +60,7 @@
           action = "find_files";
           options.desc = "Find project files";
         };
-        "<leader>/" = {
+        "<leader>sg" = {
           action = "live_grep";
           options.desc = "Grep (root dir)";
         };
@@ -155,5 +162,16 @@
         };
       };
     };
+    keymaps = [
+      {
+        mode = "n";
+        key = "<leader>sG";
+        action = "<cmd>:execute 'Telescope live_grep default_text=' . expand('<cword>')<cr>";
+        options = {
+          silent = true;
+          desc = "Grep Current Word";
+        };
+      }
+    ];
   };
 }
