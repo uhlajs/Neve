@@ -15,6 +15,7 @@
     ./neotest.nix
     ./nvim-autopairs.nix
     ./nvim-surround.nix
+    ./nvim-window-picker.nix
     ./nvterm.nix
     ./oil.nix
     ./persistence.nix
@@ -49,6 +50,7 @@
     persistence.enable = lib.mkDefault true;
     plenary.enable = lib.mkDefault true;
     project-nvim.enable = lib.mkDefault true;
+    nvim-window-picker.enable = lib.mkDefault true;
     sidebar.enable = lib.mkDefault false;
     tmux-navigator.enable = lib.mkDefault true;
     todo-comments.enable = lib.mkDefault true;
