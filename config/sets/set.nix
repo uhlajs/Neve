@@ -86,8 +86,8 @@
       # Place a column line
       colorcolumn = "80";
 
-      # Reduce which-key timeout 
-      timeoutlen = 200;
+      # Reduce which-key timeout
+      # timeoutlen = 200;
 
       # Set encoding type
       encoding = "utf-8";
@@ -105,10 +105,12 @@
 
       # Enable chars list
       list = true; # Show invisible characters (tabs, eol, ...)
-      listchars = "eol:↲,tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
+      listchars = "tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
+      # listchars = "eol:↲,tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
 
       # More space in the neovim command line for displaying messages
-      cmdheight = 2;
+      cmdheight = 1;
+      # cmdheight = 2;
 
       # We don't need to see things like INSERT anymore
       showmode = false;
@@ -122,6 +124,9 @@
       laststatus = 3; # (https://neovim.io/doc/user/options.html#'laststatus')
 
       inccommand = "split"; # (https://neovim.io/doc/user/options.html#'inccommand')
+
+      # Mainly for Obsidian formatting
+      conceallevel = 1;
     };
 
     extraConfigLua = ''
