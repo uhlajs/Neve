@@ -13,6 +13,15 @@
     };
     keymaps = [
       {
+        mode = "n";
+        key = "<leader>gb";
+        action = ":Gitsigns blame<CR>";
+        options = {
+          silent = true;
+          desc = "Blame file";
+        };
+      }
+      {
         mode = [
           "n"
           "v"
