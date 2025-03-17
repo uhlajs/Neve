@@ -77,8 +77,9 @@
       foldlevel = 99;
       foldlevelstart = 99;
       foldenable = true;
-      foldmethod = "expr";
-      foldexpr = "v:lua.vim.treesitter.foldexpr()";
+      # TODO (Honza Uhlik): Find out, why this slows down treesitter
+      # foldmethod = "expr";
+      # foldexpr = "v:lua.vim.treesitter.foldexpr()";
 
       # Always keep 8 lines above/below cursor unless at start/end of file
       scrolloff = 8;
@@ -105,12 +106,12 @@
 
       # Enable chars list
       list = true; # Show invisible characters (tabs, eol, ...)
-      listchars = "tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
       # listchars = "eol:↲,tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
+      listchars = "tab:|->,lead:·,space: ,trail:•,extends:→,precedes:←,nbsp:␣";
 
       # More space in the neovim command line for displaying messages
-      cmdheight = 1;
       # cmdheight = 2;
+      cmdheight = 1;
 
       # We don't need to see things like INSERT anymore
       showmode = false;
