@@ -23,7 +23,12 @@
       })
     ];
     extraConfigLua = ''
-      require('ultimate-autopair').setup()
+      require('ultimate-autopair').setup({
+        fastwarp={
+         multi=true,
+         {faster=false,map='<C-a>',cmap='<C-a>'},
+       }
+      })
     '';
   };
 }

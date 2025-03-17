@@ -48,14 +48,23 @@
           };
         };
       };
-      keymaps = lib.mkIf cfg.keymaps.enable
-        ([
+      keymaps = lib.mkIf cfg.keymaps.enable (
+        [
           {
             mode = "n";
             key = "<leader>bd";
-            action = "<cmd>bdelete<cr>";
+            action = ":lua bufremove()<cr>";
             options = {
               desc = "Delete buffer";
+              silent = true;
+            };
+          }
+          {
+            mode = "n";
+            key = "<leader>bD";
+            action = "<cmd>bdelete<cr>";
+            options = {
+              desc = "Delete buffer and window";
             };
           }
 
@@ -121,7 +130,8 @@
               desc = "Delete non-pinned buffers";
             };
           }
-        ] ++ (lib.optionals cfg.keymaps.enableTab [
+        ]
+        ++ (lib.optionals cfg.keymaps.enableTab [
           {
             mode = "n";
             key = "<Tab>";
@@ -139,7 +149,8 @@
               desc = "Cycle to previous buffer";
             };
           }
-        ]) ++ (lib.optionals cfg.keymaps.enableHL [
+        ])
+        ++ (lib.optionals cfg.keymaps.enableHL [
           {
             mode = "n";
             key = "<S-l>";
@@ -157,6 +168,7 @@
               desc = "Cycle to previous buffer";
             };
           }
-        ]));
+        ])
+      );
     };
 }

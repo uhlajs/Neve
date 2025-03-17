@@ -144,8 +144,9 @@
 
       {
         mode = "n";
-        key = "<leader>w-";
-        action = "<C-W>s";
+        # key = "<leader>w-";
+        key = "<leader>v";
+        action = "<C-W>v";
         options = {
           silent = true;
           desc = "Split window below";
@@ -154,7 +155,8 @@
 
       {
         mode = "n";
-        key = "<leader>w|";
+        # key = "<leader>w|";
+        key = "<leader>s";
         action = "<C-W>v";
         options = {
           silent = true;
@@ -295,15 +297,15 @@
         };
       }
 
-      {
-        mode = "n";
-        key = "J";
-        action = "mzJ`z";
-        options = {
-          silent = true;
-          desc = "Allow cursor to stay in the same place after appeding to current line";
-        };
-      }
+      # {
+      #   mode = "n";
+      #   key = "J";
+      #   action = "mzJ`z";
+      #   options = {
+      #     silent = true;
+      #     desc = "Allow cursor to stay in the same place after appeding to current line";
+      #   };
+      # }
 
       {
         mode = "v";
@@ -452,10 +454,19 @@
       }
 
       # Set highlight on search, but clear on pressing <Esc> in normal mode
+      # {
+      #   mode = "n";
+      #   key = "<Esc>";
+      #   action = "<cmd>nohlsearch<CR>";
+      # }
       {
         mode = "n";
-        key = "<Esc>";
+        key = "<C-f>";
         action = "<cmd>nohlsearch<CR>";
+        options = {
+          silent = true;
+          desc = "Stop the highlighting";
+        };
       }
     ];
   };

@@ -68,7 +68,7 @@
       signcolumn = "yes";
 
       # Enable cursor line highlight
-      cursorline = false; # Highlight the line where the cursor is located
+      cursorline = true; # Highlight the line where the cursor is located
 
       # Set fold settings
       # These options were reccommended by nvim-ufo
@@ -84,7 +84,7 @@
       scrolloff = 8;
 
       # Place a column line
-      colorcolumn = "80";
+      colorcolumn = "88";
 
       # Reduce which-key timeout
       # timeoutlen = 200;
@@ -94,14 +94,14 @@
       fileencoding = "utf-8";
 
       # Change cursor options
-      guicursor = [
-        "n-v-c:block" # Normal, visual, command-line: block cursor
-        "i-ci-ve:block" # Insert, command-line insert, visual-exclude: vertical bar cursor with block cursor, use "ver25" for 25% width
-        "r-cr:hor20" # Replace, command-line replace: horizontal bar cursor with 20% height
-        "o:hor50" # Operator-pending: horizontal bar cursor with 50% height
-        "a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor" # All modes: blinking settings
-        "sm:block-blinkwait175-blinkoff150-blinkon175" # Showmatch: block cursor with specific blinking settings
-      ];
+      # guicursor = [
+      #   "n-v-c:block" # Normal, visual, command-line: block cursor
+      #   "i-ci-ve:block" # Insert, command-line insert, visual-exclude: vertical bar cursor with block cursor, use "ver25" for 25% width
+      #   "r-cr:hor20" # Replace, command-line replace: horizontal bar cursor with 20% height
+      #   "o:hor50" # Operator-pending: horizontal bar cursor with 50% height
+      #   "a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor" # All modes: blinking settings
+      #   "sm:block-blinkwait175-blinkoff150-blinkon175" # Showmatch: block cursor with specific blinking settings
+      # ];
 
       # Enable chars list
       list = true; # Show invisible characters (tabs, eol, ...)
@@ -133,6 +133,10 @@
       local opt = vim.opt
       local g = vim.g
       local o = vim.o
+
+       -- Conform
+      g.disable_autoformat = true
+
         -- Neovide
       if g.neovide then
         g.neovide_fullscreen = false
