@@ -9,18 +9,12 @@
       lintersByFt = {
         c = [ "cpplint" ];
         cpp = [ "cpplint" ];
-        go = [ "golangci-lint" ];
         nix = [ "statix" ];
         lua = [ "selene" ];
-        python = [ "flake8" ];
-        javascript = [ "eslint_d" ];
-        javascriptreact = [ "eslint_d" ];
-        typescript = [ "eslint_d" ];
-        typescriptreact = [ "eslint_d" ];
+        python = [ "ruff" ];
         json = [ "jsonlint" ];
-        java = [ "checkstyle" ];
-        haskell = [ "hlint" ];
         bash = [ "shellcheck" ];
+        yaml = [ "yamllint" ];
       };
     };
   };
