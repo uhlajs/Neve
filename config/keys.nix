@@ -144,9 +144,18 @@
 
       {
         mode = "n";
+        key = "<C-W>v";
+        action = ":split<cr>";
+        options = {
+          silent = true;
+          desc = "Split window below";
+        };
+      }
+      {
+        mode = "n";
         # key = "<leader>w-";
         key = "<leader>v";
-        action = "<C-W>v";
+        action = ":split<cr>";
         options = {
           silent = true;
           desc = "Split window below";
@@ -155,9 +164,18 @@
 
       {
         mode = "n";
+        key = "<C-W>s";
+        action = ":vsplit<cr>";
+        options = {
+          silent = true;
+          desc = "Split window right";
+        };
+      }
+      {
+        mode = "n";
         # key = "<leader>w|";
         key = "<leader>s";
-        action = "<C-W>v";
+        action = ":vsplit<cr>";
         options = {
           silent = true;
           desc = "Split window right";
