@@ -6,6 +6,7 @@
 {
   imports = [
     ./diffview.nix
+    ./fugitive.nix
     ./gitsigns.nix
     ./lazygit.nix
     ./neogit.nix
@@ -19,5 +20,6 @@
     gitsigns.enable = lib.mkDefault true;
     lazygit.enable = lib.mkDefault true;
     neogit.enable = lib.mkDefault false;
+    fugitive.enable = lib.mkDefault true;
   };
 }
