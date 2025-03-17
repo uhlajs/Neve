@@ -68,7 +68,7 @@
           action = "command_history";
           options.desc = "Command History";
         };
-        "<leader>b" = {
+        "<leader>bt" = {
           action = "buffers";
           options.desc = "+buffer";
         };
