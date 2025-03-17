@@ -88,7 +88,7 @@
 
           {
             mode = "n";
-            key = "<leader>br";
+            key = "<leader>bl";
             action = "<cmd>BufferLineCloseRight<cr>";
             options = {
               desc = "Delete buffers to the right";
@@ -97,7 +97,7 @@
 
           {
             mode = "n";
-            key = "<leader>bl";
+            key = "<leader>bh";
             action = "<cmd>BufferLineCloseLeft<cr>";
             options = {
               desc = "Delete buffers to the left";
