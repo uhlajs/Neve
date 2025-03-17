@@ -53,11 +53,20 @@
       }
       {
         mode = "n";
-        key = "<leader>ghp";
+        key = "<leader>ghh";
         action = ":Gitsigns preview_hunk<CR>";
         options = {
           silent = true;
           desc = "Preview hunk";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>ghl";
+        action = ":Gitsigns preview_hunk_inline<CR>";
+        options = {
+          silent = true;
+          desc = "Preview hunk line";
         };
       }
       {
@@ -109,6 +118,24 @@
         options = {
           silent = true;
           desc = "Undo Stage Hunk";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>ghn";
+        action = ":Gitsigns nav_hunk next<CR>";
+        options = {
+          silent = true;
+          desc = "Jump to Next Hunk";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>ghp";
+        action = ":Gitsigns nav_hunk prev<CR>";
+        options = {
+          silent = true;
+          desc = "Jump to Previous Hunk";
         };
       }
     ];
