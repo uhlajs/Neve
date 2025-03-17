@@ -19,7 +19,7 @@
 
         enableTab = lib.mkOption {
           type = lib.types.bool;
-          default = true;
+          default = false;
           description = "Enable keymaps for switching buffers with Tab and S-Tab";
         };
       };
