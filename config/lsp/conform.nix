@@ -1,9 +1,23 @@
-{ lib, config, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 {
   options = {
     conform.enable = lib.mkEnableOption "Enable conform module";
   };
   config = lib.mkIf config.conform.enable {
+
+    # TODO (Honza Uhlik): Remove this bugfix after this issue is resolved
+    #   https://github.com/nix-community/nixvim/issues/1141#issuecomment-2054102360
+    extraPackages = with pkgs; [
+      nixfmt-rfc-style
+      rustfmt
+      ruff
+      stylua
+    ];
 
     plugins.conform-nvim = {
       enable = true;
@@ -35,28 +49,33 @@
             __unkeyed-2 = "prettier";
             stop_after_first = true;
           };
-          javascript = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          javascriptreact = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          typescript = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          typescriptreact = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          java = [ "google-java-format" ];
-          python = [ "black" ];
+          # javascript = {
+          #   __unkeyed-1 = "prettierd";
+          #   __unkeyed-2 = "prettier";
+          #   stop_after_first = true;
+          # };
+          # javascriptreact = {
+          #   __unkeyed-1 = "prettierd";
+          #   __unkeyed-2 = "prettier";
+          #   stop_after_first = true;
+          # };
+          # typescript = {
+          #   __unkeyed-1 = "prettierd";
+          #   __unkeyed-2 = "prettier";
+          #   stop_after_first = true;
+          # };
+          # typescriptreact = {
+          #   __unkeyed-1 = "prettierd";
+          #   __unkeyed-2 = "prettier";
+          #   stop_after_first = true;
+          # };
+          # java = [ "google-java-format" ];
+          # python = [ "black" ];
+          python = [
+            "ruff"
+            "ruff_format"
+            "ruff_organize_imports"
+          ];
           lua = [ "stylua" ];
           nix = [ "nixfmt" ];
           markdown = {
