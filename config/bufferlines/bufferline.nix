@@ -53,15 +53,6 @@
           {
             mode = "n";
             key = "<leader>bd";
-            action = ":lua bufremove()<cr>";
-            options = {
-              desc = "Delete buffer";
-              silent = true;
-            };
-          }
-          {
-            mode = "n";
-            key = "<leader>bD";
             action = "<cmd>bdelete<cr>";
             options = {
               desc = "Delete buffer and window";
