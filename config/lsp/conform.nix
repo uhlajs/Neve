@@ -13,6 +13,7 @@
     # TODO (Honza Uhlik): Remove this bugfix after this issue is resolved
     #   https://github.com/nix-community/nixvim/issues/1141#issuecomment-2054102360
     extraPackages = with pkgs; [
+      bazel-buildtools
       nixfmt-rfc-style
       nodePackages.prettier
       prettierd
@@ -86,6 +87,7 @@
             stop_after_first = true;
           };
           rust = [ "rustfmt" ];
+          bzl = ["buildifier"];
         };
       };
     };
