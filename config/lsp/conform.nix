@@ -14,8 +14,10 @@
     #   https://github.com/nix-community/nixvim/issues/1141#issuecomment-2054102360
     extraPackages = with pkgs; [
       nixfmt-rfc-style
-      rustfmt
+      nodePackages.prettier
+      prettierd
       ruff
+      rustfmt
       stylua
     ];
 
