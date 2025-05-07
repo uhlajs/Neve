@@ -16,10 +16,12 @@
       bazel-buildtools
       nixfmt-rfc-style
       nodePackages.prettier
+      opentofu
       prettierd
       ruff
       rustfmt
       stylua
+      terragrunt
     ];
 
     plugins.conform-nvim = {
@@ -88,6 +90,8 @@
           };
           rust = [ "rustfmt" ];
           bzl = ["buildifier"];
+          hcl = ["terragrunt_hclfmt"];
+          terraform = ["tofu_fmt"];
         };
       };
     };
