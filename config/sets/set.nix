@@ -136,7 +136,7 @@
       local o = vim.o
 
        -- Conform
-      g.disable_autoformat = true
+      g.disable_autoformat = false
 
         -- Neovide
       if g.neovide then
