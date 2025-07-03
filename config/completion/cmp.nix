@@ -20,9 +20,6 @@
       cmp_luasnip = {
         enable = true;
       }; # snippets
-      copilot-cmp = {
-        enable = false;
-      }; # copilot suggestions
       cmp = {
         enable = true;
         autoEnableSources = false;

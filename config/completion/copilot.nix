@@ -4,49 +4,29 @@
     copilot.enable = lib.mkEnableOption "Enable copilot module";
   };
   config = lib.mkIf config.copilot.enable {
-    plugins.copilot-lua = {
-      enable = true;
-      panel = {
-        enabled = false;
-        autoRefresh = true;
-        keymap = {
-          jumpPrev = "[[";
-          jumpNext = "]]";
-          accept = "<CR>";
-          refresh = "gr";
-          open = "<M-CR>";
-        };
-        layout = {
-          position = "bottom"; # | top | left | right
-          ratio = 0.4;
-        };
+    plugins = {
+      copilot-lua = {
+        enable = true;
+        panel.enabled = false;
+        suggestion.enabled = false;
       };
-      suggestion = {
-        enabled = false;
-        autoTrigger = true;
-        debounce = 75;
-        keymap = {
-          accept = "<M-l>";
-          acceptWord = false;
-          acceptLine = false;
-          next = "<M-]>";
-          prev = "<M-[>";
-          dismiss = "<C-]>";
-        };
+      copilot-cmp = {
+        enable = true;
       };
-      filetypes = {
-        yaml = false;
-        markdown = false;
-        help = false;
-        gitcommit = false;
-        gitrebase = false;
-        hgcommit = false;
-        svn = false;
-        cvs = false;
-        "." = false;
+      copilot-chat = {
+        enable = true;
       };
-      copilotNodeCommand = "node"; # Node.js version must be > 18.x
-      serverOptsOverrides = { };
     };
+    keymaps = [
+      {
+        mode = "n";
+        key = "<leader>l";
+        action = "<cmd>:CopilotChatToggle<cr>";
+        options = {
+          silent = true;
+          desc = "Open Copilot Chat Assistant";
+        };
+      }
+    ];
   };
 }
