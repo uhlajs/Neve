@@ -85,7 +85,7 @@
             enable = true;
           };
           pyright = {
-            enable = true;
+            enable = false;
           };
           ruff = {
             enable = true;
