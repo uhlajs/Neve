@@ -25,8 +25,9 @@
         autoEnableSources = false;
         settings = {
           experimental = {
-            ghost_text = true;
+            ghost_text = false;
           };
+          preselect = "cmp.PreselectMode.Item";
           mapping = {
             "<C-n>" = "cmp.mapping.select_next_item()";
             "<C-p>" = "cmp.mapping.select_prev_item()";
