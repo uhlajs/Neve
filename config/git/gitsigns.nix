@@ -26,7 +26,7 @@
           "n"
           "v"
         ];
-        key = "<leader>gh";
+        key = "<leader>gs";
         action = "gitsigns";
         options = {
           silent = true;
@@ -35,7 +35,7 @@
       }
       {
         mode = "n";
-        key = "<leader>ghb";
+        key = "<leader>gsb";
         action = ":Gitsigns blame_line<CR>";
         options = {
           silent = true;
@@ -44,7 +44,7 @@
       }
       {
         mode = "n";
-        key = "<leader>ghd";
+        key = "<leader>gsd";
         action = ":Gitsigns diffthis<CR>";
         options = {
           silent = true;
@@ -53,7 +53,7 @@
       }
       {
         mode = "n";
-        key = "<leader>ghh";
+        key = "<leader>gsh";
         action = ":Gitsigns preview_hunk<CR>";
         options = {
           silent = true;
@@ -62,7 +62,7 @@
       }
       {
         mode = "n";
-        key = "<leader>ghl";
+        key = "<leader>gsl";
         action = ":Gitsigns preview_hunk_inline<CR>";
         options = {
           silent = true;
@@ -71,7 +71,7 @@
       }
       {
         mode = "n";
-        key = "<leader>ghR";
+        key = "<leader>gsR";
         action = ":Gitsigns reset_buffer<CR>";
         options = {
           silent = true;
@@ -83,7 +83,7 @@
           "n"
           "v"
         ];
-        key = "<leader>ghr";
+        key = "<leader>gsr";
         action = ":Gitsigns reset_hunk<CR>";
         options = {
           silent = true;
@@ -95,7 +95,7 @@
           "n"
           "v"
         ];
-        key = "<leader>ghs";
+        key = "<leader>gss";
         action = ":Gitsigns stage_hunk<CR>";
         options = {
           silent = true;
@@ -104,7 +104,7 @@
       }
       {
         mode = "n";
-        key = "<leader>ghS";
+        key = "<leader>gsS";
         action = ":Gitsigns stage_buffer<CR>";
         options = {
           silent = true;
@@ -113,7 +113,7 @@
       }
       {
         mode = "n";
-        key = "<leader>ghu";
+        key = "<leader>gsu";
         action = ":Gitsigns undo_stage_hunk<CR>";
         options = {
           silent = true;
@@ -122,7 +122,7 @@
       }
       {
         mode = "n";
-        key = "<leader>ghn";
+        key = "<leader>gsn";
         action = ":Gitsigns nav_hunk next<CR>";
         options = {
           silent = true;
@@ -131,7 +131,7 @@
       }
       {
         mode = "n";
-        key = "<leader>ghp";
+        key = "<leader>gsp";
         action = ":Gitsigns nav_hunk prev<CR>";
         options = {
           silent = true;

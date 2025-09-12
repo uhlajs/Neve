@@ -1,7 +1,6 @@
 {
   lib,
   config,
-  pkgs,
   ...
 }:
 {
@@ -12,6 +11,7 @@
     plugins.obsidian = {
       enable = true;
       settings = {
+        legacy_commands = false;
         workspaces = [
           {
             name = "personal";
@@ -21,11 +21,10 @@
       };
     };
     keymaps = [
-      # Disable arrow keys
       {
         mode = "n";
         key = "<leader>os";
-        action = ":ObsidianSearch<cr>";
+        action = ":Obsidian search<cr>";
         options = {
           silent = true;
           desc = "Search";
@@ -34,7 +33,7 @@
       {
         mode = "n";
         key = "<leader>oo";
-        action = ":ObsidianQuickSwitch<cr>";
+        action = ":Obsidian quick_switch<cr>";
         options = {
           silent = true;
           desc = "Quick Switch";
@@ -43,7 +42,7 @@
       {
         mode = "n";
         key = "<leader>or";
-        action = ":ObsidianRename<cr>";
+        action = ":Obsidian rename<cr>";
         options = {
           silent = true;
           desc = "Rename";
@@ -52,7 +51,7 @@
       {
         mode = "n";
         key = "<leader>on";
-        action = ":ObsidianNew<cr>";
+        action = ":Obsidian new<cr>";
         options = {
           silent = true;
           desc = "New";
