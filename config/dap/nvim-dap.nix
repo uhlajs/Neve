@@ -22,13 +22,25 @@
           };
         };
         configurations = {
-          java = [
+          python = [
             {
-              type = "java";
-              request = "launch";
-              name = "Debug (Attach) - Remote";
-              hostName = "127.0.0.1";
-              port = 5005;
+              type = "python";
+              request = "attach";
+              name = "Debug (Attach) - Bazel";
+              connect = {
+                hostName = "127.0.0.1";
+                port = 5678;
+              };
+              pathMappings = [
+                {
+                  localRoot = "\${workspaceFolder}";
+                  remoteRoot.__raw = ''
+                    function()
+                      return vim.fn.input('remoteRoot: ')
+                    end
+                  '';
+                }
+              ];
             }
           ];
         };
