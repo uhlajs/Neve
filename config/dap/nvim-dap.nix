@@ -26,7 +26,7 @@
             {
               type = "python";
               request = "attach";
-              name = "Debug (Attach) - Remote";
+              name = "Debug (Attach) - Bazel";
               connect = {
                 hostName = "127.0.0.1";
                 port = 5678;
@@ -34,7 +34,11 @@
               pathMappings = [
                 {
                   localRoot = "\${workspaceFolder}";
-                  remoteRoot = "/home/honza/.cache/bazel/_bazel_honza/aa5dc75f310cfaaa784964cc6c6cfa64/execroot/_main/bazel-out/k8-opt/bin/test.runfiles/_main";
+                  remoteRoot.__raw = ''
+                    function()
+                      return vim.fn.input('remoteRoot: ')
+                    end
+                  '';
                 }
               ];
             }
