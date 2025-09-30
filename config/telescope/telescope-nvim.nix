@@ -152,7 +152,7 @@
           options.desc = "Colorscheme preview";
         };
         "<leader>fp" = {
-          action = "projects";
+          action = "project";
           options.desc = "Projects";
         };
         "<leader>sd" = {
