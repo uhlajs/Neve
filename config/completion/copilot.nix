@@ -6,7 +6,7 @@
   config = lib.mkIf config.copilot.enable {
     plugins = {
       copilot-lua = {
-        enable = true;
+        enable = false;
         settings = {
           panel.enabled = false;
           suggestion.enabled = false;
@@ -16,28 +16,28 @@
         enable = true;
       };
       copilot-chat = {
-        enable = true;
+        enable = false;
       };
     };
-    keymaps = [
-      {
-        mode = "n";
-        key = "<leader>l";
-        action = "<cmd>:CopilotChatToggle<cr>";
-        options = {
-          silent = true;
-          desc = "Open Copilot Chat Assistant";
-        };
-      }
-      {
-        mode = "v";
-        key = "<leader>l";
-        action = "<cmd>:CopilotChatToggle<cr>";
-        options = {
-          silent = true;
-          desc = "Open Copilot Chat Assistant";
-        };
-      }
-    ];
+    # keymaps = [
+    #   {
+    #     mode = "n";
+    #     key = "<leader>l";
+    #     action = "<cmd>:CopilotChatToggle<cr>";
+    #     options = {
+    #       silent = true;
+    #       desc = "Open Copilot Chat Assistant";
+    #     };
+    #   }
+    #   {
+    #     mode = "v";
+    #     key = "<leader>l";
+    #     action = "<cmd>:CopilotChatToggle<cr>";
+    #     options = {
+    #       silent = true;
+    #       desc = "Open Copilot Chat Assistant";
+    #     };
+    #   }
+    # ];
   };
 }
