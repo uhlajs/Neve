@@ -7,6 +7,21 @@
     plugins.lspconfig.enable = true;
     lsp = {
       servers = {
+        "*" = {
+          settings = {
+            capabilities = {
+              positionEncodings = "utf-16";
+              textDocument = {
+                semanticTokens = {
+                  multilineTokenSupport = true;
+                };
+              };
+            };
+            root_markers = [
+              ".git"
+            ];
+          };
+        };
         clangd = {
           enable = true;
         };
