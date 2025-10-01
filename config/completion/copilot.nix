@@ -16,28 +16,28 @@
         enable = true;
       };
       copilot-chat = {
-        enable = false;
+        enable = true;
       };
     };
-    # keymaps = [
-    #   {
-    #     mode = "n";
-    #     key = "<leader>l";
-    #     action = "<cmd>:CopilotChatToggle<cr>";
-    #     options = {
-    #       silent = true;
-    #       desc = "Open Copilot Chat Assistant";
-    #     };
-    #   }
-    #   {
-    #     mode = "v";
-    #     key = "<leader>l";
-    #     action = "<cmd>:CopilotChatToggle<cr>";
-    #     options = {
-    #       silent = true;
-    #       desc = "Open Copilot Chat Assistant";
-    #     };
-    #   }
-    # ];
+    keymaps = [
+      {
+        mode = "n";
+        key = "<leader>l";
+        action = "<cmd>:CopilotChatToggle<cr>";
+        options = {
+          silent = true;
+          desc = "Open Copilot Chat Assistant";
+        };
+      }
+      {
+        mode = "v";
+        key = "<leader>l";
+        action = "<cmd>:CopilotChatToggle<cr>";
+        options = {
+          silent = true;
+          desc = "Open Copilot Chat Assistant";
+        };
+      }
+    ];
   };
 }
